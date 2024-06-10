@@ -1,4 +1,6 @@
+// export default App;
 import React, { useState, useRef, useEffect } from 'react';
+import './App.css'; // Import file CSS untuk styling
 
 const App = () => {
   const videoRef = useRef(null);
@@ -36,11 +38,11 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="camera-container"> 
       {isCameraAvailable ? (
         <video
           ref={videoRef}
-          style={{ width: '100%', maxWidth: '500px', maxHeight: '500px' }}
+          className="video-stream"
           autoPlay
         ></video>
       ) : (
