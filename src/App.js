@@ -1,10 +1,10 @@
-// export default App;
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css'; // Import file CSS untuk styling
 
 const App = () => {
   const videoRef = useRef(null);
   const [isCameraAvailable, setIsCameraAvailable] = useState(false);
+  const [inputText, setInputText] = useState(''); // State untuk menyimpan teks input
 
   useEffect(() => {
     // Mengecek apakah browser mendukung akses ke kamera
@@ -38,7 +38,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className="camera-container"> 
+    <div className="camera-container">
+      <img src="../img/logo[1].png" alt="Logo" className="logo" />
       {isCameraAvailable ? (
         <video
           ref={videoRef}
@@ -48,6 +49,16 @@ const App = () => {
       ) : (
         <p>Kamera tidak tersedia</p>
       )}
+      <div className="text-input-container">
+        <input
+          type="text"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+          placeholder="Masukkan teks di sini"
+          className="text-input"
+        />
+        <p className="display-text">{inputText}</p> {/* Menampilkan teks input */}
+      </div>
     </div>
   );
 };

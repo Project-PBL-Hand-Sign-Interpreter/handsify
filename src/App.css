@@ -1,26 +1,42 @@
-
 .camera-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0; /* Warna latar belakang */
-}
-
-.video-stream {
-  width: 50%; /* Lebar video */
-  border-radius: 10px; /* Membuat sudut video menjadi melengkung */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan video */
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #E7F8FF;
 }
 
+.logo {
+  width: 350px; /* Sesuaikan ukuran logo */
+  margin-bottom: 10px; /* Tambahkan margin di bawah logo */
+}
+
+.video-stream {
+  width: 90%;
+  max-width: 800px; /* Sesuaikan lebar maksimum */
+  height: auto; /* Menjaga aspek rasio */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-input {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.display-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
