@@ -1,3 +1,7 @@
+/* App.css */
+
+/* Add general styles here */
+
 .camera-container {
   display: flex;
   flex-direction: column;
@@ -8,6 +12,7 @@
 
 .logo {
   width: 350px; /* Sesuaikan ukuran logo */
+  height: auto;
   margin-bottom: 10px; /* Tambahkan margin di bawah logo */
 }
 
@@ -26,17 +31,13 @@
   align-items: center;
 }
 
-.text-input {
-  width: 80%;
-  max-width: 600px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
 .display-text {
   margin-top: 10px;
   font-size: 18px;
   color: #333;
+  border: 2px solid blue; /* Blue border */
+  border-radius: 8px; /* Making the corners rounded */
+  padding: 10px; /* Adding padding */
+  min-width: 800px; /* Setting max-width */
+  text-align: center; /* Centering the text */
 }
